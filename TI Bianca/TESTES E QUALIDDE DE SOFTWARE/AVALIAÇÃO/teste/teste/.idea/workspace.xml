@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f39b3876-b449-4cc3-9c3b-52783a9fffb0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../LPII 2/aula3/aula03/src/main/java/br/org/fundatec/aula03/Carro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../LPII 2/aula3/aula03/src/main/java/br/org/fundatec/aula03/Cor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../LPII 2/aula3/aula03/src/main/java/br/org/fundatec/aula03/HelloWordControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../LPII 2/PROJETOS/aula/aula/src/main/java/br/org/fundatec/aula/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../LPII 2/PROJETOS/aula/aula/src/main/java/br/org/fundatec/aula/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../LPII 2/PROJETOS/aula/aula/src/main/java/br/org/fundatec/aula/PessoaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../LPII 2/PROJETOS/aula/aula/src/main/java/br/org/fundatec/aula/PessoaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../REDES/ProtocoloTBL/src/CRC8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../REDES/ProtocoloTBL/src/Protocol_TBL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TesteAutomatizado/TesteAutomatizado" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TesteAutomatizado/TesteAutomatizado" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="2YdvUHC70yxNoDrLykkXCwmxVZj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f39b3876-b449-4cc3-9c3b-52783a9fffb0" name="Changes" comment="" />
+      <created>1700868294058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700868294058</updated>
+    </task>
+    <servers />
+  </component>
+</project>
