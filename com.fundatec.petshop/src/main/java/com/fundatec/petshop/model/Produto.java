@@ -1,9 +1,8 @@
 package com.fundatec.petshop.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +13,12 @@ public class Produto {
 
     @Column(length = 20)
     private String marca;
+
+    @ManyToMany(mappedBy = "produto",cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    private List<Atendimento> atendimento;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    private TipoAnimal tipoAnimal;
 
     public String getNome() {
         return nome;}
@@ -28,18 +33,7 @@ public class Produto {
 
                 public void setMarca (String marca){
                     this.marca = marca;}
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Produto produto = (Produto) o;
-        return Objects.equals(nome, produto.marca);
-                }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(marca);
-    }
 }
 
 

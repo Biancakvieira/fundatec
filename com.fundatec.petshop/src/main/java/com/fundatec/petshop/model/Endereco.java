@@ -8,10 +8,6 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    @Column(length = 20, nullable = false)
-    private String tipo;
-
     @Column(length = 80, nullable = false)
     private String rua;
 
@@ -24,12 +20,15 @@ public class Endereco {
     @Column(length = 2, nullable = false)
     private Estado estado;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    private Cliente cliente;
+
     @Column(nullable = false)
     private Integer numero;
 
     @OneToOne
     @JoinColumn(name = "animal_id")
-    private Animal animal;
+    private Pet animal;
 
     public Endereco(Long id, String rua, String bairro, String cidade, Estado estado, Integer numero) {
         this.id = id;
@@ -91,11 +90,11 @@ public class Endereco {
         this.numero = numero;
     }
 
-    public Animal getAnimal() {
+    public Pet getAnimal() {
         return animal;
     }
 
-    public void setAnimal(Animal animal) {
+    public void setAnimal(Pet animal) {
         this.animal = animal;
     }
 }

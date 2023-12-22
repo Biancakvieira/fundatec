@@ -1,15 +1,13 @@
 package com.fundatec.petshop.model;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 public class Vacina {
 
+    @Id
     @Column
     private String nomeVacina;
 
@@ -19,8 +17,8 @@ public class Vacina {
     @Column
     private String doencasAplicaveis;
 
-    @OneToOne(mappedBy = "vacina", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private Produto produto;
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    private Mamifero mamifero;
 
     public String getNomeVacina() {
         return nomeVacina;
@@ -46,12 +44,12 @@ public class Vacina {
         this.doencasAplicaveis = doencasAplicaveis;
     }
 
-    public Produto getProduto() {
-        return produto;
+    public Mamifero getProduto() {
+        return mamifero;
     }
 
     public void setProduto(Produto produto) {
-        this.produto = produto;
+        this.mamifero = mamifero;
     }
 
     public boolean vacinaVencida() {

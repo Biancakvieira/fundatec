@@ -14,9 +14,6 @@ public class Cliente {
     @Column(length = 20)
     private String nomeCliente;
 
-    @OneToOne(mappedBy = "cliente", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private Endereco endereco;
-
     public String getCpf() {
         return cpf;
     }
@@ -25,31 +22,12 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public String getNome() {
+    public String getNomeCliente() {
         return nomeCliente;
     }
 
-    public void setNome(String nome) {
-        this.nomeCliente = nome;
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cliente cliente = (Cliente) o;
-        return Objects.equals(nomeCliente, cliente.nomeCliente);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(nomeCliente);
-    }
-}
+   }
