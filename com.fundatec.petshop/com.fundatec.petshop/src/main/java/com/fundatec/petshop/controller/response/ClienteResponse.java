@@ -1,6 +1,7 @@
 package com.fundatec.petshop.controller.response;
 
-import lombok.Data;
+import com.fundatec.petshop.model.Cliente;
+import lombok.Builder;
 
 import java.util.List;
 
@@ -15,11 +16,20 @@ import java.util.List;
         "estado": "RS"
         }
         }*/
-@Data
+
+@Builder
 public class ClienteResponse {
     private Integer id;
     private String nome;
     private String cpf;
     private List<EnderecoResponse> endereco;
-
+    public static ClienteResponse of(Cliente cliente) {
+        return ClienteResponse.builder()
+                .id(cliente.getId())
+                .nome(cliente.getNomeCliente())
+                .cpf(cliente.getCpf())
+                .endereco(List.of(EnderecoResponse.of(cliente.getEndereco()))
+                )
+                .build();
+    }
 }

@@ -1,33 +1,31 @@
 package com.fundatec.petshop.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
-import java.util.Objects;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class Cliente {
 
     @Id
-    @Column(length = 20)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String cpf;
 
-    @Column(length = 20)
     private String nomeCliente;
 
-    public String getCpf() {
-        return cpf;
-    }
+    private String identidade;
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
+    @OneToOne
+    @JoinColumn(name = "", columnDefinition = "string")
+    private Endereco endereco;
 
-    public String getNomeCliente() {
-        return nomeCliente;
-    }
-
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
-    }
-
-   }
+}

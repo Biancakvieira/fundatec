@@ -17,11 +17,9 @@ import lombok.ToString;
 public class Mamifero extends TipoAnimal{
 
 
-    @Column(length = 20)
     private String raca;
 
-    @Column(length = 20)
-    private String possuiPelos;
+   private String possuiPelos;
 
     public String getRaca() {
         return raca;

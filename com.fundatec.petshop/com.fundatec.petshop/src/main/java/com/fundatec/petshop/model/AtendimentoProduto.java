@@ -2,6 +2,8 @@ package com.fundatec.petshop.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 public class AtendimentoProduto {
 
@@ -17,9 +19,20 @@ public class AtendimentoProduto {
     @MapsId("produto_id")
     @JoinColumn(name = "produto_id", referencedColumnName = "id")
     private Produto produto;
-
+    @Column
     private Integer quantidade;
+    @Column
     private String nomeUsuario;
+    @Column
+    private LocalDate dataEntrada;
+
+    public LocalDate getDataAtendimento() {
+        return dataEntrada;
+    }
+
+    public void setDataAtendimento(LocalDate dataAtendimento) {
+        this.dataEntrada = dataEntrada;
+    }
 
     public AtendimentoProdutoId getId() {
         return id;
